@@ -17,6 +17,9 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
+  get '/linkedin/auth'      => 'linkedin#auth'
+get '/linkedin/callback'  => 'linkedin#callback'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
